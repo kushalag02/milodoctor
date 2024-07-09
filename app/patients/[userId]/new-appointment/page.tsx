@@ -6,7 +6,9 @@ import { getPatient } from "@/lib/actions/patient.actions";
 
 
 const Appointment = async ({ params: { userId } }: SearchParamProps) => {
-    const patient = await getPatient(userId);
+    const patient = { userId };
+    // console.log("Patient - ", patient);
+
     // Sentry.metrics.set("user_view_new-appointment", patient.userId);
 
     return (
@@ -22,7 +24,7 @@ const Appointment = async ({ params: { userId } }: SearchParamProps) => {
                     />
 
                     <AppointmentForm
-                        patientId={patient?.$id}
+                        patientId={userId}
                         userId={userId}
                         type="create"
                     />
