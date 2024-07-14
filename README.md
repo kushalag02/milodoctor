@@ -22,6 +22,6 @@ npm  run dev
 
 ## Tech Stack
 
-**Client:** Next, shadcn ui, TailwindCSS
+**Client:** Next, shadcn UI, TailwindCSS
 
-**Server:** Next, Appwrite,
+**Server:** Next, Appwrite
